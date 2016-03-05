@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.siddworks.android.crashed">
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:excludeFromRecents="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".DashboardActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WidgetConfigurationActivity"
+            android:label="@string/title_activity_widget_configuration"
+            android:theme="@style/Theme.UserDialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".CrashedWidgetProvider"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Crashed Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".IconSelectionActivity"
+            android:label="@string/title_activity_icon_selection"
+            android:parentActivityName=".WidgetConfigurationActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.siddworks.android.crashed.WidgetConfigurationActivity" />
+        </activity>
+        <activity
+            android:name=".CrashActivity"
+            android:label="@string/title_activity_crash"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

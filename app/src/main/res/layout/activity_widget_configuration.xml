@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true" >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/template_navigation_CardView">
+
+        <!-- Content parent LinearLayout -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:src="@drawable/widget_preview_bg"
+                    android:id="@+id/widget_hero_ImageView"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preview"
+                    android:padding="2dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/transparent_black"
+                    android:id="@+id/textView2" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:id="@+id/widget_icon_preview_ImageView"
+                        android:src="@mipmap/ic_launcher"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fake_app"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/widget_text_preview_ImageView" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="48dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/widget_icon_Image"
+                    android:layout_margin="8dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@color/transparent_black_light"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_password"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/widget_name_EditText"
+                        android:inputType="none"
+                        android:text="@string/fake_app"
+                        android:hint="@string/widget_text"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/widget_done_FloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_done"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:onClick="onDoneClick"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:elevation="2dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_anchorGravity="bottom|right"
+        app:layout_anchor="@id/widget_hero_ImageView" />
+
+</android.support.design.widget.CoordinatorLayout>
+

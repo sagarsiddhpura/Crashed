@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Crashed</string>
+    <string name="title_activity_widget_configuration">Configure Widget</string>
+    <string name="name">Name</string>
+    <string name="widget_text">Widget Text</string>
+    <string name="preview">Preview</string>
+    <string name="fake_app">Crashed</string>
+    <string name="title_activity_icon_selection">Select Icon</string>
+    <string name="empty_list">No Apps…</string>
+    <string name="default_theme">Default Theme</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="title_activity_crash">Crash</string>
+</resources>
