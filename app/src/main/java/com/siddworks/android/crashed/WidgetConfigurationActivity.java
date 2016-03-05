@@ -98,7 +98,7 @@ public class WidgetConfigurationActivity extends Activity {
 
         RemoteViews remoteView = new RemoteViews(getPackageName(),
                 R.layout.layout_widget);
-        remoteView.setTextViewText(R.id.textView, nameEditText.getText());
+        remoteView.setTextViewText(R.id.textView, nameEditText.getText().toString()+"");
         if(appModel != null && appModel.getBitmap() !=null) {
             remoteView.setImageViewBitmap(R.id.imageView, appModel.getBitmap());
         }
